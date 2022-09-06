@@ -1,13 +1,17 @@
 {% extends "layout.njk" %}
-{% block  content %}
+{% block content %}
 <main>
     <h1>{{ title }}</h1>
     <p>{{ intro }}</p>
     <p>Detta är dock statisk text. Följt av data från databas.</p>
     <ul>
         {% for row in rows %}
-        <li>{{ row.name }}</li>
-        {% endfor %}
+        <div class="d-flex">
+            <li>
+                {{ row.name }} {{ row.secret_identity }} {{ row.bio }}
+            </li>
+            {% endfor %}
+        </div>
     </ul>
 </main>
 {% endblock %}%

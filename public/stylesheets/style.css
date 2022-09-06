@@ -50,6 +50,7 @@ body {
   text-rendering: optimizeSpeed;
   /* 🟣 Set base font-family */
   font-family: system-ui, sans-serif;
+  
 }
 
 /* A elements that don't have a class get default styles */
@@ -127,19 +128,19 @@ select {
   --step-3: clamp(2.27rem, calc(2.01rem + 1.29vw), 2.93rem);
   --step-4: clamp(2.72rem, calc(2.36rem + 1.83vw), 3.66rem);
   --step-5: clamp(3.27rem, calc(2.75rem + 2.56vw), 4.58rem);
-  --color-foreground: #333;
-  --color-background: #efefef;
+  --color-foreground: rgb(255, 255, 255);
+  --color-background: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-user-color-scheme=light]) {
-    --color-foreground: #efefef;
-    --color-background: #333;
+    --color-foreground: #000000;
+    --color-background: rgb(255, 255, 255);
   }
 }
 :root[data-user-color-scheme=dark] {
-  --color-foreground: #efefef;
-  --color-background: #333;
+  --color-foreground: #000000;
+  --color-background: rgb(255, 255, 255);
 }
 
 body {
@@ -156,4 +157,14 @@ body {
 
 h1 {
   font-size: var(--step-5);
+}
+
+.d-flex {
+  color: rgb(0, 79, 0);
+  justify-content: center;
+  
+}
+
+p {
+  color: rgb(0, 79, 0);
 }

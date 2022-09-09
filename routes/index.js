@@ -23,4 +23,15 @@ router.get('/', async function(req, res, next) {
     }
 });
 
+
+router.get('/test', function(request, response){
+    response.render('test.njk', {
+        title: 'Pickle Rick',
+        
+
+    })
+})
+
+
+
 module.exports = router;
